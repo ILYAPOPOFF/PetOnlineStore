@@ -13,8 +13,7 @@
 		09D015A4299FC3B900A762FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D015A3299FC3B900A762FC /* Assets.xcassets */; };
 		09D015A7299FC3B900A762FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D015A5299FC3B900A762FC /* LaunchScreen.storyboard */; };
 		09D015C4299FC86E00A762FC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015C3299FC86E00A762FC /* MainController.swift */; };
-		09D015C6299FC88A00A762FC /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015C5299FC88A00A762FC /* CatalogController.swift */; };
-		09D015C8299FC89300A762FC /* BagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015C7299FC89300A762FC /* BagController.swift */; };
+		09D015C8299FC89300A762FC /* BasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015C7299FC89300A762FC /* BasketController.swift */; };
 		09D015CA299FC89D00A762FC /* ShopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015C9299FC89D00A762FC /* ShopsController.swift */; };
 		09D015CC299FC8E700A762FC /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015CB299FC8E700A762FC /* ProfileController.swift */; };
 		09D015D1299FC94200A762FC /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015D0299FC94200A762FC /* R.swift */; };
@@ -30,8 +29,7 @@
 		09D015A6299FC3B900A762FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09D015A8299FC3B900A762FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D015C3299FC86E00A762FC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		09D015C5299FC88A00A762FC /* CatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
-		09D015C7299FC89300A762FC /* BagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagController.swift; sourceTree = "<group>"; };
+		09D015C7299FC89300A762FC /* BasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketController.swift; sourceTree = "<group>"; };
 		09D015C9299FC89D00A762FC /* ShopsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsController.swift; sourceTree = "<group>"; };
 		09D015CB299FC8E700A762FC /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		09D015D0299FC94200A762FC /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
@@ -68,9 +66,9 @@
 		09D01599299FC3B800A762FC /* OnlineStore */ = {
 			isa = PBXGroup;
 			children = (
+				09D015D4299FCADF00A762FC /* Base */,
 				09D015CE299FC91100A762FC /* Helpers */,
 				09D015B0299FC42900A762FC /* Controllers */,
-				09D0159E299FC3B800A762FC /* TabBarController.swift */,
 				09D015AF299FC40900A762FC /* Application */,
 				09D015AE299FC3F600A762FC /* SupportingFiles */,
 			);
@@ -100,8 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				09D015B1299FC42F00A762FC /* Main */,
-				09D015B6299FC45100A762FC /* Catalog */,
-				09D015B5299FC44B00A762FC /* Bag */,
+				09D015B5299FC44B00A762FC /* Basket */,
 				09D015B4299FC44200A762FC /* Shops */,
 				09D015B3299FC43900A762FC /* Profile */,
 			);
@@ -132,20 +129,12 @@
 			path = Shops;
 			sourceTree = "<group>";
 		};
-		09D015B5299FC44B00A762FC /* Bag */ = {
+		09D015B5299FC44B00A762FC /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				09D015C7299FC89300A762FC /* BagController.swift */,
+				09D015C7299FC89300A762FC /* BasketController.swift */,
 			);
-			path = Bag;
-			sourceTree = "<group>";
-		};
-		09D015B6299FC45100A762FC /* Catalog */ = {
-			isa = PBXGroup;
-			children = (
-				09D015C5299FC88A00A762FC /* CatalogController.swift */,
-			);
-			path = Catalog;
+			path = Basket;
 			sourceTree = "<group>";
 		};
 		09D015CE299FC91100A762FC /* Helpers */ = {
@@ -163,6 +152,14 @@
 				09D015D2299FC96100A762FC /* UIColor + ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09D015D4299FCADF00A762FC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				09D0159E299FC3B800A762FC /* TabBarController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +237,8 @@
 				09D0159F299FC3B800A762FC /* TabBarController.swift in Sources */,
 				09D015D3299FC96100A762FC /* UIColor + ext.swift in Sources */,
 				09D015D1299FC94200A762FC /* R.swift in Sources */,
-				09D015C6299FC88A00A762FC /* CatalogController.swift in Sources */,
 				09D0159B299FC3B800A762FC /* AppDelegate.swift in Sources */,
-				09D015C8299FC89300A762FC /* BagController.swift in Sources */,
+				09D015C8299FC89300A762FC /* BasketController.swift in Sources */,
 				09D0159D299FC3B800A762FC /* SceneDelegate.swift in Sources */,
 				09D015CC299FC8E700A762FC /* ProfileController.swift in Sources */,
 			);

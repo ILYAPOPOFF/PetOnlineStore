@@ -1,5 +1,5 @@
 //
-//  CatalogController.swift
+//  BagController.swift
 //  OnlineStore
 //
 //  Created by ILYA POPOV on 17.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CatalogController: UINavigationController {
+class BasketController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
