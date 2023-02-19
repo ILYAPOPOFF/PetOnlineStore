@@ -31,10 +31,10 @@ class TabBarController: UITabBarController {
         let navController = UINavigationController(rootViewController: vc)
         navController.tabBarItem = item
         
-        //tabBar.backgroundColor = .white
+        tabBar.backgroundColor = .white
         
         tabBar.tintColor = R.Colors.primary
-        tabBar.barTintColor = R.Colors.inActive
+        //tabBar.barTintColor = R.Colors.inActive
 //        tabBar.layer.borderColor = R.Colors.separator.cgColor
 //        tabBar.layer.borderWidth = 1
 //        tabBar.layer.masksToBounds = true

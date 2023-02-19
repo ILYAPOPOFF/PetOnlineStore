@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0982648E29A0DA8700150343 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982648D29A0DA8700150343 /* BaseInfoView.swift */; };
+		0982649229A0E39F00150343 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982649129A0E39F00150343 /* BaseView.swift */; };
+		0982649529A0F08B00150343 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982649429A0F08B00150343 /* ListItem.swift */; };
+		0982649729A0F0D100150343 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982649629A0F0D100150343 /* ListSection.swift */; };
+		0982649929A0F93E00150343 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982649829A0F93E00150343 /* TestView.swift */; };
 		09D0159B299FC3B800A762FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0159A299FC3B800A762FC /* AppDelegate.swift */; };
 		09D0159D299FC3B800A762FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0159C299FC3B800A762FC /* SceneDelegate.swift */; };
 		09D0159F299FC3B800A762FC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0159E299FC3B800A762FC /* TabBarController.swift */; };
@@ -18,9 +23,17 @@
 		09D015CC299FC8E700A762FC /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015CB299FC8E700A762FC /* ProfileController.swift */; };
 		09D015D1299FC94200A762FC /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015D0299FC94200A762FC /* R.swift */; };
 		09D015D3299FC96100A762FC /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015D2299FC96100A762FC /* UIColor + ext.swift */; };
+		09D015DD299FF8AF00A762FC /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */; };
+		09D015DF299FFE0B00A762FC /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015DE299FFE0B00A762FC /* CategoriesCell.swift */; };
+		09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015E329A01BED00A762FC /* CategoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0982648D29A0DA8700150343 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		0982649129A0E39F00150343 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0982649429A0F08B00150343 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		0982649629A0F0D100150343 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		0982649829A0F93E00150343 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		09D01597299FC3B800A762FC /* OnlineStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D0159A299FC3B800A762FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D0159C299FC3B800A762FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +47,9 @@
 		09D015CB299FC8E700A762FC /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		09D015D0299FC94200A762FC /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		09D015D2299FC96100A762FC /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
+		09D015DE299FFE0B00A762FC /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		09D015E329A01BED00A762FC /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0982648C29A0DA7100150343 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0982648D29A0DA8700150343 /* BaseInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0982649329A0EFA500150343 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0982649429A0F08B00150343 /* ListItem.swift */,
+				0982649629A0F0D100150343 /* ListSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		09D0158E299FC3B800A762FC = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +99,7 @@
 		09D01599299FC3B800A762FC /* OnlineStore */ = {
 			isa = PBXGroup;
 			children = (
+				09D015E229A01BCD00A762FC /* Model */,
 				09D015D4299FCADF00A762FC /* Base */,
 				09D015CE299FC91100A762FC /* Helpers */,
 				09D015B0299FC42900A762FC /* Controllers */,
@@ -108,6 +142,8 @@
 		09D015B1299FC42F00A762FC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0982649329A0EFA500150343 /* Model */,
+				09D015D9299FF7E700A762FC /* Views */,
 				09D015C3299FC86E00A762FC /* MainController.swift */,
 			);
 			path = Main;
@@ -157,9 +193,29 @@
 		09D015D4299FCADF00A762FC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0982648C29A0DA7100150343 /* Views */,
 				09D0159E299FC3B800A762FC /* TabBarController.swift */,
+				0982649129A0E39F00150343 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		09D015D9299FF7E700A762FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */,
+				09D015DE299FFE0B00A762FC /* CategoriesCell.swift */,
+				0982649829A0F93E00150343 /* TestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09D015E229A01BCD00A762FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09D015E329A01BED00A762FC /* CategoryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +289,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D015CA299FC89D00A762FC /* ShopsController.swift in Sources */,
+				0982648E29A0DA8700150343 /* BaseInfoView.swift in Sources */,
+				09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */,
 				09D015C4299FC86E00A762FC /* MainController.swift in Sources */,
+				0982649529A0F08B00150343 /* ListItem.swift in Sources */,
+				0982649729A0F0D100150343 /* ListSection.swift in Sources */,
 				09D0159F299FC3B800A762FC /* TabBarController.swift in Sources */,
+				09D015DF299FFE0B00A762FC /* CategoriesCell.swift in Sources */,
+				0982649929A0F93E00150343 /* TestView.swift in Sources */,
 				09D015D3299FC96100A762FC /* UIColor + ext.swift in Sources */,
 				09D015D1299FC94200A762FC /* R.swift in Sources */,
 				09D0159B299FC3B800A762FC /* AppDelegate.swift in Sources */,
+				09D015DD299FF8AF00A762FC /* CategoriesCollectionView.swift in Sources */,
 				09D015C8299FC89300A762FC /* BasketController.swift in Sources */,
+				0982649229A0E39F00150343 /* BaseView.swift in Sources */,
 				09D0159D299FC3B800A762FC /* SceneDelegate.swift in Sources */,
 				09D015CC299FC8E700A762FC /* ProfileController.swift in Sources */,
 			);
@@ -308,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -384,8 +448,8 @@
 				INFOPLIST_FILE = OnlineStore/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,8 +475,8 @@
 				INFOPLIST_FILE = OnlineStore/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
