@@ -11,8 +11,8 @@ class BaseInfoView: BaseView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = R.Font.sfBold(with: 32)
-        label.textColor = R.Colors.inActive
+        label.font = R.Font.sfBold(with:24)
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -27,7 +27,7 @@ class BaseInfoView: BaseView {
     
     init(with title: String? = nil) {
         
-        titleLabel.text = title?.uppercased()
+        titleLabel.text = title
         titleLabel.textAlignment = .left
         
         

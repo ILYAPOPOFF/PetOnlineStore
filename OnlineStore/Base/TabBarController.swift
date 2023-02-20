@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
         
         tabBar.backgroundColor = .white
         
-        tabBar.tintColor = R.Colors.primary
+        tabBar.tintColor = R.Colors.orange
         //tabBar.barTintColor = R.Colors.inActive
 //        tabBar.layer.borderColor = R.Colors.separator.cgColor
 //        tabBar.layer.borderWidth = 1

@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Category {
-    let image: UIImage
+struct CategoryModel {
+    
+    let image: String
     let name: String
 }

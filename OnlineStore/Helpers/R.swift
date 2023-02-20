@@ -13,8 +13,11 @@ enum R {
     enum Colors {
         static let primary = UIColor(hexString: "#86C204")
         static let inActive = UIColor(hexString: "#ACACAC")
+        static let grey = UIColor(hexString: "#1D1D1F")
         
         static let separator = UIColor(hexString: "#DBDBDB")
+        
+        static let orange = UIColor(hexString: "#B1501F")
     }
     
     //MARK: - Image

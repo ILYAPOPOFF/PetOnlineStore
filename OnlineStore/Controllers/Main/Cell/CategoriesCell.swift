@@ -39,16 +39,15 @@ class CategoriesCell: UICollectionViewCell {
         addSubview(labelCategory)
         setConstraints()
         
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(category: Category) {
-        imageCategoty.image = category.image
-        labelCategory.text = category.name
+    func set(image: String, title: String) {
+        imageCategoty.image = UIImage(named: image)
+        labelCategory.text = title
     }
     
 }
