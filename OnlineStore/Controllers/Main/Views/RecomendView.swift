@@ -19,6 +19,7 @@ final class RecomendView: BaseInfoView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.showsHorizontalScrollIndicator = false
         collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.isScrollEnabled = false
         return collection
     }()
 }

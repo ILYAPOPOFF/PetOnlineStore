@@ -31,18 +31,31 @@ class MainController: UIViewController {
     
     private let stackView : UIStackView = {
         let view = UIStackView()
-        //view.distribution = .fillProportionally
+        view.distribution = .fill
         view.axis = .vertical
         view.spacing = 12
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private let scrollView : UIScrollView = {
-        let view = UIScrollView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private lazy var scrollView : UIScrollView = {
+        let views = UIScrollView()
+        views.contentSize = contentSize
+        views.frame = view.bounds
+        views.translatesAutoresizingMaskIntoConstraints = false
+        return views
     }()
+    
+    private lazy var contentView : UIView = {
+        let views = UIView()
+        views.frame.size = contentSize
+        views.translatesAutoresizingMaskIntoConstraints = false
+        return views
+    }()
+    
+    private var contentSize: CGSize {
+        CGSize(width: view.frame.width, height: view.frame.height + 500)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +70,8 @@ class MainController: UIViewController {
         //view.addSubview(newGoodsView)
         //view.addSubview(recomendView)
         view.addSubview(scrollView)
-        scrollView.addSubview(stackView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(stackView)
         
         
         [categoiesCollectionNew, newGoodsView, recomendView].forEach(stackView.addArrangedSubview)
@@ -83,31 +97,38 @@ extension MainController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
-            categoiesCollectionNew.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 10),
-            categoiesCollectionNew.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),
-            categoiesCollectionNew.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0),
+            categoiesCollectionNew.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            categoiesCollectionNew.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            categoiesCollectionNew.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             categoiesCollectionNew.heightAnchor.constraint(equalToConstant: 123),
             
             newGoodsView.topAnchor.constraint(equalTo: categoiesCollectionNew.bottomAnchor, constant: 12),
-            newGoodsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),
-            newGoodsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0),
+            newGoodsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            newGoodsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             newGoodsView.heightAnchor.constraint(equalToConstant: 290),
             //newGoodsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             
             recomendView.topAnchor.constraint(equalTo: newGoodsView.bottomAnchor, constant: 12),
-            recomendView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            recomendView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            recomendView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            recomendView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            recomendView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            recomendView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            //scrollView.widthAnchor.constraint(equalToConstant: 290),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             
-            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            //stackView.widthAnchor.constraint(equalToConstant: 290),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
         ])
     }
