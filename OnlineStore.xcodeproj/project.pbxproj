@@ -27,6 +27,8 @@
 		09D015DD299FF8AF00A762FC /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */; };
 		09D015DF299FFE0B00A762FC /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015DE299FFE0B00A762FC /* CategoriesCell.swift */; };
 		09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015E329A01BED00A762FC /* CategoryModel.swift */; };
+		09DAF9C629A5658100CF3850 /* RecomendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C529A5658100CF3850 /* RecomendView.swift */; };
+		09DAF9C829A6102400CF3850 /* RecomendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C729A6102400CF3850 /* RecomendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
 		09D015DE299FFE0B00A762FC /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		09D015E329A01BED00A762FC /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		09DAF9C529A5658100CF3850 /* RecomendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendView.swift; sourceTree = "<group>"; };
+		09DAF9C729A6102400CF3850 /* RecomendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			children = (
 				09D015DE299FFE0B00A762FC /* CategoriesCell.swift */,
 				09C05F9029A37E1E00E07FF7 /* NewGoodsCell.swift */,
+				09DAF9C729A6102400CF3850 /* RecomendCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				09D015DC299FF8AF00A762FC /* CategoriesCollectionView.swift */,
 				09C05F8E29A3736400E07FF7 /* NewGoogs.swift */,
+				09DAF9C529A5658100CF3850 /* RecomendView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			files = (
 				09D015CA299FC89D00A762FC /* ShopsController.swift in Sources */,
 				0982648E29A0DA8700150343 /* BaseInfoView.swift in Sources */,
+				09DAF9C829A6102400CF3850 /* RecomendCell.swift in Sources */,
 				09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */,
 				09C05F9129A37E1E00E07FF7 /* NewGoodsCell.swift in Sources */,
 				09D015C4299FC86E00A762FC /* MainController.swift in Sources */,
@@ -306,6 +313,7 @@
 				09D015C8299FC89300A762FC /* BasketController.swift in Sources */,
 				0982649229A0E39F00150343 /* BaseView.swift in Sources */,
 				09C05F8D29A2D00E00E07FF7 /* ListSection.swift in Sources */,
+				09DAF9C629A5658100CF3850 /* RecomendView.swift in Sources */,
 				09C05F8F29A3736400E07FF7 /* NewGoogs.swift in Sources */,
 				09D0159D299FC3B800A762FC /* SceneDelegate.swift in Sources */,
 				09D015CC299FC8E700A762FC /* ProfileController.swift in Sources */,

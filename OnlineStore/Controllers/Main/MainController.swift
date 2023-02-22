@@ -22,6 +22,27 @@ class MainController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private let recomendView : RecomendView = {
+        let view = RecomendView(with: "Recomend.")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let stackView : UIStackView = {
+        let view = UIStackView()
+        //view.distribution = .fillProportionally
+        view.axis = .vertical
+        view.spacing = 12
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let scrollView : UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +53,14 @@ class MainController: UIViewController {
     
     private func setupView() {
         
-        view.addSubview(categoiesCollectionNew)
-        view.addSubview(newGoodsView)
+        //view.addSubview(categoiesCollectionNew)
+        //view.addSubview(newGoodsView)
+        //view.addSubview(recomendView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(stackView)
+        
+        
+        [categoiesCollectionNew, newGoodsView, recomendView].forEach(stackView.addArrangedSubview)
         
         title = "Главная"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -56,16 +83,32 @@ extension MainController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
-            categoiesCollectionNew.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            categoiesCollectionNew.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            categoiesCollectionNew.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            categoiesCollectionNew.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 10),
+            categoiesCollectionNew.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),
+            categoiesCollectionNew.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0),
             categoiesCollectionNew.heightAnchor.constraint(equalToConstant: 123),
             
-            newGoodsView.topAnchor.constraint(equalTo: categoiesCollectionNew.bottomAnchor, constant: 0),
-            newGoodsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            newGoodsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            newGoodsView.heightAnchor.constraint(equalToConstant: 320),
-        
+            newGoodsView.topAnchor.constraint(equalTo: categoiesCollectionNew.bottomAnchor, constant: 12),
+            newGoodsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),
+            newGoodsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0),
+            newGoodsView.heightAnchor.constraint(equalToConstant: 290),
+            //newGoodsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
+            recomendView.topAnchor.constraint(equalTo: newGoodsView.bottomAnchor, constant: 12),
+            recomendView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            recomendView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            recomendView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
         ])
     }
 }

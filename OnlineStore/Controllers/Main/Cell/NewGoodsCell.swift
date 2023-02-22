@@ -94,6 +94,7 @@ extension NewGoodsCell {
             priceLabel.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 12),
             priceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            //priceLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
             
         ])
     }
