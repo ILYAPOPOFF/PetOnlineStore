@@ -54,7 +54,7 @@ class MainController: UIViewController {
     }()
     
     private var contentSize: CGSize {
-        CGSize(width: view.frame.width, height: view.frame.height + 500)
+        CGSize(width: view.frame.width, height: view.frame.height)
     }
 
     override func viewDidLoad() {
@@ -97,9 +97,9 @@ extension MainController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
-            categoiesCollectionNew.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            categoiesCollectionNew.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            categoiesCollectionNew.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            categoiesCollectionNew.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            categoiesCollectionNew.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            categoiesCollectionNew.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
             categoiesCollectionNew.heightAnchor.constraint(equalToConstant: 123),
             
             newGoodsView.topAnchor.constraint(equalTo: categoiesCollectionNew.bottomAnchor, constant: 12),
@@ -111,6 +111,7 @@ extension MainController {
             recomendView.topAnchor.constraint(equalTo: newGoodsView.bottomAnchor, constant: 12),
             recomendView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             recomendView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            //recomendView.heightAnchor.constraint(equalToConstant: 800),
             recomendView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
@@ -122,7 +123,7 @@ extension MainController {
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0),
             
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             //stackView.widthAnchor.constraint(equalToConstant: 290),

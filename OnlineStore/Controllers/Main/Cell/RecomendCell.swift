@@ -42,8 +42,9 @@ class RecomendCell: UICollectionViewCell {
     private let buttonBasket: UIButton = {
         let button = UIButton()
         button.setTitle("В корзину", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.backgroundColor = #colorLiteral(red: 0.9656803012, green: 0.965680182, blue: 0.965680182, alpha: 1)
-        button.tintColor = R.Colors.grey
+        button.setTitleColor(R.Colors.grey, for: .normal)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -52,7 +53,6 @@ class RecomendCell: UICollectionViewCell {
     private let buttonFavorites: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "heart"), for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.9656803012, green: 0.965680182, blue: 0.965680182, alpha: 1)
         button.tintColor = R.Colors.grey
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -87,6 +87,8 @@ class RecomendCell: UICollectionViewCell {
         
         [buttonBasket, buttonFavorites].forEach(buttonStackView.addArrangedSubview)
         
+        setConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -113,7 +115,7 @@ extension RecomendCell {
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             
-            buttonStackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 12),
+            buttonStackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 16),
             buttonStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             buttonStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             buttonStackView.heightAnchor.constraint(equalToConstant: 32)
