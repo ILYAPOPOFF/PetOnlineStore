@@ -29,6 +29,7 @@
 		09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D015E329A01BED00A762FC /* CategoryModel.swift */; };
 		09DAF9C629A5658100CF3850 /* RecomendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C529A5658100CF3850 /* RecomendView.swift */; };
 		09DAF9C829A6102400CF3850 /* RecomendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C729A6102400CF3850 /* RecomendCell.swift */; };
+		09ECE1D129AA415400EA1BC2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECE1D029AA415400EA1BC2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		09D015E329A01BED00A762FC /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		09DAF9C529A5658100CF3850 /* RecomendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendView.swift; sourceTree = "<group>"; };
 		09DAF9C729A6102400CF3850 /* RecomendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendCell.swift; sourceTree = "<group>"; };
+		09ECE1D029AA415400EA1BC2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		09D015B5299FC44B00A762FC /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				09ECE1CF29AA414000EA1BC2 /* Views */,
 				09D015C7299FC89300A762FC /* BasketController.swift */,
 			);
 			path = Basket;
@@ -225,6 +228,14 @@
 				09C05F8A29A2CD7700E07FF7 /* MockData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		09ECE1CF29AA414000EA1BC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09ECE1D029AA415400EA1BC2 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D015CA299FC89D00A762FC /* ShopsController.swift in Sources */,
+				09ECE1D129AA415400EA1BC2 /* MainView.swift in Sources */,
 				0982648E29A0DA8700150343 /* BaseInfoView.swift in Sources */,
 				09DAF9C829A6102400CF3850 /* RecomendCell.swift in Sources */,
 				09D015E429A01BED00A762FC /* CategoryModel.swift in Sources */,
