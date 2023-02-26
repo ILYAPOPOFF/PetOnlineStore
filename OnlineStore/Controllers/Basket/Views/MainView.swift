@@ -9,6 +9,19 @@ import UIKit
 
 final class MainView: BaseInfoView {
     
+    private let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.06).cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 9
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.position = CGPoint(x: 0, y: 0)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private let mainLabel: UILabel = {
         let label = UILabel()
         label.text = "Корзина пуста"
@@ -30,7 +43,7 @@ final class MainView: BaseInfoView {
         return label
     }()
     
-    private let button: UIButton = {
+    public let button: UIButton = {
         let button = UIButton()
         button.setTitle("Главная", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
@@ -38,6 +51,7 @@ final class MainView: BaseInfoView {
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
+        //button.addTarget(self, action: #selector(actionMainButton), for: .touchUpInside)
         return button
     }()
     
@@ -47,9 +61,10 @@ extension MainView {
     override func setupViews() {
         super.setupViews()
         
-        addSubview(mainLabel)
-        addSubview(secondLabel)
-        addSubview(button)
+        addSubview(backgroundView)
+        backgroundView.addSubview(mainLabel)
+        backgroundView.addSubview(secondLabel)
+        backgroundView.addSubview(button)
         
     }
     
@@ -58,7 +73,12 @@ extension MainView {
         
         NSLayoutConstraint.activate([
             
-            mainLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            mainLabel.topAnchor.constraint(equalTo: topAnchor, constant: 30),
             mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             secondLabel.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 10),
@@ -81,3 +101,14 @@ extension MainView {
 
     }
 }
+
+//extension MainView {
+//
+//    @objc func actionMainButton() {
+//        let mainViewController = MainController()
+//        mainViewController.hidesBottomBarWhenPushed = true
+//
+//
+//    }
+//
+//}

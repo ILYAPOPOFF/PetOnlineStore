@@ -30,6 +30,7 @@
 		09DAF9C629A5658100CF3850 /* RecomendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C529A5658100CF3850 /* RecomendView.swift */; };
 		09DAF9C829A6102400CF3850 /* RecomendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF9C729A6102400CF3850 /* RecomendCell.swift */; };
 		09ECE1D129AA415400EA1BC2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECE1D029AA415400EA1BC2 /* MainView.swift */; };
+		09ECE1D329AA4FD200EA1BC2 /* RecomendBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECE1D229AA4FD200EA1BC2 /* RecomendBasketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		09DAF9C529A5658100CF3850 /* RecomendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendView.swift; sourceTree = "<group>"; };
 		09DAF9C729A6102400CF3850 /* RecomendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendCell.swift; sourceTree = "<group>"; };
 		09ECE1D029AA415400EA1BC2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09ECE1D229AA4FD200EA1BC2 /* RecomendBasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendBasketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				09ECE1D029AA415400EA1BC2 /* MainView.swift */,
+				09ECE1D229AA4FD200EA1BC2 /* RecomendBasketView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				09D0159F299FC3B800A762FC /* TabBarController.swift in Sources */,
 				09D015DF299FFE0B00A762FC /* CategoriesCell.swift in Sources */,
 				09D015D3299FC96100A762FC /* UIColor + ext.swift in Sources */,
+				09ECE1D329AA4FD200EA1BC2 /* RecomendBasketView.swift in Sources */,
 				09D015D1299FC94200A762FC /* R.swift in Sources */,
 				09D0159B299FC3B800A762FC /* AppDelegate.swift in Sources */,
 				09D015DD299FF8AF00A762FC /* CategoriesCollectionView.swift in Sources */,
